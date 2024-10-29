@@ -34,7 +34,7 @@ Here's an example of a simple component with state:
 `}
 </CopyableCode>
 
-In the example above, the `Counter` component has an internal state `count` that keeps track of the number of times a button is clicked. The `setState()` method is used to update the state and trigger a re-render of the component.
+In the example above, the <span className='highlight'>Counter</span> component has an internal state <span className='highlight'>count</span> that keeps track of the number of times a button is clicked. The <span className='highlight'>setState()</span> method is used to update the state and trigger a re-render of the component.
 
 ## Why Use State?
 <br/>
@@ -58,15 +58,15 @@ React components have a lifecycle that consists of several phases, from initiali
 
 Here are some common lifecycle methods in React:
 
-1. **`componentDidMount()`**: This method is called after the component has been rendered to the DOM. It is useful for performing side effects like data fetching, subscriptions, or DOM manipulations.
+1. **<span className='highlight'>componentDidMount()</span>**: This method is called after the component has been rendered to the DOM. It is useful for performing side effects like data fetching, subscriptions, or DOM manipulations.
 
-2. **`componentDidUpdate(prevProps, prevState)`**: This method is called after the component's state or props have changed. It is useful for responding to state changes and updating the component's UI.
+2. **<span className='highlight'>componentDidUpdate(prevProps, prevState)</span>**: This method is called after the component's state or props have changed. It is useful for responding to state changes and updating the component's UI.
 
-3. **`componentWillUnmount()`**: This method is called before the component is removed from the DOM. It is useful for cleaning up resources like event listeners or subscriptions.
+3. **<span className='highlight'>componentWillUnmount()</span>**: This method is called before the component is removed from the DOM. It is useful for cleaning up resources like event listeners or subscriptions.
 
-4. **`shouldComponentUpdate(nextProps, nextState)`**: This method is called before the component re-renders. It is useful for optimizing performance by preventing unnecessary re-renders.
+4. **<span className='highlight'>shouldComponentUpdate(nextProps, nextState)</span>**: This method is called before the component re-renders. It is useful for optimizing performance by preventing unnecessary re-renders.
 
-5. **`getDerivedStateFromProps(nextProps, prevState)`**: This method is called when the component receives new props. It is useful for updating the component's state based on the new props.
+5. **<span className='highlight'>getDerivedStateFromProps(nextProps, prevState)</span>**: This method is called when the component receives new props. It is useful for updating the component's state based on the new props.
 
 ## Conclusion
 <br/>

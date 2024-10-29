@@ -12,7 +12,7 @@ Here's an example of JSX code:
 {`const element = <h1>Hello, World!</h1>;`}
 </CopyableCode>
 
-In the example above, we are creating a JSX element that represents an `<h1>` heading with the text "Hello, World!". This JSX code is transformed into regular JavaScript code by tools like Babel before it is rendered in the browser.
+In the example above, we are creating a JSX element that represents an <span className='highlight'> `<h1>` </span> heading with the text "Hello, World!". This JSX code is transformed into regular JavaScript code by tools like Babel before it is rendered in the browser.
 <br/>
 ## Why Use JSX?
 <br/>
@@ -20,7 +20,7 @@ JSX offers several benefits when working with React:
 
 1. **Familiar Syntax**: JSX looks similar to HTML, making it easier for developers to write and understand the code.
 
-2. **Full Power of JavaScript**: JSX allows you to embed JavaScript expressions within curly braces `{}`. This means you can use JavaScript logic and variables directly in your JSX code.
+2. **Full Power of JavaScript**: JSX allows you to embed JavaScript expressions within curly braces <span className='highlight'>`{}`</span>. This means you can use JavaScript logic and variables directly in your JSX code.
 
 3. **Component Structure**: JSX makes it easy to create and compose React components. You can nest components within each other and pass props to customize their behavior.
 
@@ -37,22 +37,22 @@ JSX elements are similar to HTML elements but are represented as JavaScript obje
 {`const element = <h1>Hello, World!</h1>;`}
 </CopyableCode>
 
-In the example above, `element` is a JSX element that represents an `<h1>` heading with the text "Hello, World!". JSX elements can have attributes like HTML elements, and you can nest elements within each other to create complex structures.
+In the example above, <span className='highlight'>element</span> is a JSX element that represents an <span className='highlight'>`<h1>`</span> heading with the text "Hello, World!". JSX elements can have attributes like HTML elements, and you can nest elements within each other to create complex structures.
 <br/>
 ## JSX Expressions
 <br/>
-JSX allows you to embed JavaScript expressions within curly braces `{}`. This allows you to include dynamic content and logic in your JSX code. Here's an example:
+JSX allows you to embed JavaScript expressions within curly braces <span className='highlight'>`{}`</span>. This allows you to include dynamic content and logic in your JSX code. Here's an example:
 <br/>
 <CopyableCode language="jsx">
 {`const name = "Alice";
 const element = <h1>Hello, {name}!</h1>;`}
 </CopyableCode>
 
-In the example above, we are using the `name` variable within the JSX element to display a personalized greeting. JSX expressions can be simple variables, function calls, or more complex JavaScript expressions.
+In the example above, we are using the <span className='highlight'>name</span> variable within the JSX element to display a personalized greeting. JSX expressions can be simple variables, function calls, or more complex JavaScript expressions.
 
 ## JSX and Babel
 <br/>
-JSX is not valid JavaScript syntax, so it needs to be transformed into regular JavaScript code before it can be executed in the browser. This transformation is done by tools like Babel, which converts JSX code into `React.createElement()` calls.
+JSX is not valid JavaScript syntax, so it needs to be transformed into regular JavaScript code before it can be executed in the browser. This transformation is done by tools like Babel, which converts JSX code into <span className='highlight'>React.createElement()</span> calls.
 
 Here's how the JSX code:
 <br/>
@@ -68,7 +68,7 @@ is transformed into the following JavaScript code by Babel:
 ```
 </CopyableCode>
 
-The `React.createElement()` function creates a new React element with the specified type, props, and children. This is the underlying mechanism that React uses to create and render components based on JSX code.
+The <span className='highlight'>React.createElement()</span> function creates a new React element with the specified type, props, and children. This is the underlying mechanism that React uses to create and render components based on JSX code.
 <br/>
 ## Conclusion
 <br/>

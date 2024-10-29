@@ -1,0 +1,7 @@
+
+.highlight {
+    background-color: rgb(49, 49, 49); /* Couleur de fond jaune */
+    color: rgb(219, 219, 219); /* Couleur du texte noir */
+    padding: 0.2em; /* Un peu de padding pour rendre le surlignage plus visible */
+    border-radius: 5px; /* Coins arrondis */
+}
