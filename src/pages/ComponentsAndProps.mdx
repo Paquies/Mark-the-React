@@ -1,0 +1,85 @@
+import CopyableCode from '/src/components/CopyableCode.tsx';
+
+# Components and Props
+
+## What are Components?
+
+Components are the building blocks of a React application. They are reusable UI elements that can be composed together to create complex user interfaces. Components can be simple, like a button or a text input, or more complex, like a form or a navigation bar.
+
+Here's an example of a simple React component:
+
+<CopyableCode language="jsx">
+{`function Welcome(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}`}
+</CopyableCode>
+
+In the example above, we define a functional component called `Welcome` that takes a `props` object as an argument. The component returns an `<h1>` heading with a personalized greeting using the `name` prop.
+
+## Props
+
+Props (short for properties) are a way to pass data from a
+parent component to a child component in React. They are
+read-only and help you create dynamic and reusable components.
+
+Here's an example of using props in a React component:
+
+<CopyableCode language="jsx">
+{`function Welcome(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}
+
+const App = () => {
+    return <Welcome name="Alice" />;
+}`}
+</CopyableCode>
+
+In the example above, the `Welcome` component takes a `name` prop and displays a personalized greeting. The `App` component renders the `Welcome` component with the `name` prop set to "Alice".
+
+## Passing Props
+
+You can pass props to a component by adding attributes to the component tag. Props are passed as key-value pairs, where the key is the prop name and the value is the data you want to pass.
+
+Here's an example of passing props to a React component:
+
+<CopyableCode language="jsx">
+{`function Welcome(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}
+
+const App = () => {
+    return <Welcome name="Alice" />;
+}`}
+
+</CopyableCode>
+
+In the example above, the `Welcome` component receives the `name` prop with the value "Alice" from the `App` component.
+
+## Default Props
+
+You can define default values for props in a React component using the `defaultProps` property. If a prop is not provided when the component is rendered, the default value will be used instead.
+
+Here's an example of setting default props in a React component:
+
+<CopyableCode language="jsx">
+{`function Welcome(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}
+
+Welcome.defaultProps = {
+    name: "Guest"
+};`}
+
+</CopyableCode>
+
+In the example above, the `Welcome` component sets a default value of "Guest" for the `name` prop. If the `name` prop is not provided when the component is rendered, the default value will be used.
+
+## Conclusion
+
+In this guide, we covered the basics of React components and props. Components are reusable UI elements that can be composed together to create complex user interfaces. Props allow you to pass data from a parent component to a child component, making your components dynamic and reusable.
+
+Happy coding!
+
+<br/>
+<hr/>
+<br/>

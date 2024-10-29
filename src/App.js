@@ -7,6 +7,9 @@ import Footer from './components/Footer.tsx';
 import Nav from './components/Nav.tsx';
 import Layout_navigation from './components/Layout_navigation.tsx';
 import Home from './pages/Home.tsx';
+import SettingUp from './pages/SettingUp.mdx';
+import UnderstandingJSX from './pages/UnderstandingJSX.mdx';
+import ComponentsAndProps from './pages/ComponentsAndProps.mdx';
 
 export default function App() {
   return (
@@ -16,11 +19,14 @@ export default function App() {
         <div className="col-md-3 ">
           <Layout_navigation />
         </div>
-        <div className="col-md-9">
+        <div className="col-md-6">
           <MDXProvider>
             <div className="App">
               <div className="mt-5"></div>
               <GettingStarted />
+              <SettingUp />
+              <UnderstandingJSX />
+              <ComponentsAndProps />
               <div ></div>
             </div>
           </MDXProvider>

@@ -1,37 +1,39 @@
 import React, { ReactNode } from 'react';
 
 interface CopyableCodeProps {
-  children: ReactNode;
+    children: ReactNode;
+    language?: string;
 }
 
-const CopyableCode: React.FC<CopyableCodeProps> = ({ children }) => {
+const CopyableCode: React.FC<CopyableCodeProps> = ({ children, language }) => {
     const handleCopy = () => {
-        if (typeof children === 'string') {
-            navigator.clipboard.writeText(children);
-            alert('Code copied to clipboard!');
-        }
+        const textToCopy = typeof children === 'string' ? children : '';
+        navigator.clipboard.writeText(textToCopy);
+        alert('Code copied to clipboard!');
     };
 
     return (
-        <div style={{ position: 'relative', display: 'inline-block', margin: '0', width: '60%'}}>
-            {/* <button
+        <div className='copyable_code' style={{ position: 'relative', display: 'inline-block', margin: '0', width: '70%', height:'40%' }}>
+            <button
                 onClick={handleCopy}
                 style={{
                     position: 'absolute',
-                    top: '10px',
-                    right: '10px',
-                    padding: '5px 10px',
-                    fontSize: '12px',
+                    top: '5px',
+                    right: '50px',
+                    padding: '3px 7px',
+                    fontSize: '10px',
                     cursor: 'pointer',
-                    background: '#0070f3',
+                    background: 'rgb(54, 54, 54)',
                     color: '#fff',
                     border: 'none',
-                    borderRadius: '3px',
+                    borderRadius: '5px',
                     zIndex: 1,
+                    opacity: 0,
+                    transition: 'opacity 0.3s',
                 }}
             >
-                Copy
-            </button> */}
+                <i className="bi bi-copy"></i> Copy
+            </button>
             <pre style={{ 
                 background: 'rgb(44, 44, 44)', 
                 borderRadius: '10px', 
@@ -39,10 +41,15 @@ const CopyableCode: React.FC<CopyableCodeProps> = ({ children }) => {
                 color: '#ffffff', 
                 paddingTop: '15px',
                 paddingLeft: '10px',
-                marginRight: '40px',// Ensure the button does not overlap the text
+                marginRight: '40px', // Ensure the button does not overlap the text
             }}>
-                <code>{children}</code>
+                <code className={`language-${language}`}>{children}</code>
             </pre>
+            <style>{`
+                .copyable_code:hover button {
+                    opacity: 1 !important;
+                }
+            `}</style>
         </div>
     );
 };
