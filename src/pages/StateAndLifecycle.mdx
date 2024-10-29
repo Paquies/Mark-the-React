@@ -1,0 +1,77 @@
+import CopyableCode from '/src/components/CopyableCode.tsx';
+
+# State and Lifecycle
+<br/><br/>
+## What is State?
+<br/>
+
+State is a built-in feature in React that allows components to store and manage their own data. It represents the current state of a component and can change over time in response to user actions, network requests, or other events.
+
+Here's an example of a simple component with state:
+
+<CopyableCode language="jsx">
+{`  import React, { Component } from 'react';
+
+    class Counter extends Component {
+        constructor(props) {
+            super(props);
+            this.state = { count: 0 };
+        }
+
+        render() {
+            return (
+            <div>
+                <p>Count: {this.state.count}</p>
+                <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+                Increment
+                </button>
+            </div>
+            );
+        }
+    }
+
+    export default Counter; 
+`}
+</CopyableCode>
+
+In the example above, the `Counter` component has an internal state `count` that keeps track of the number of times a button is clicked. The `setState()` method is used to update the state and trigger a re-render of the component.
+
+## Why Use State?
+<br/>
+
+State is useful for managing dynamic data in your components. Here are some common use cases for using state in React:
+
+1. **User Input**: State can store form data, input values, and other user interactions in your components.
+
+2. **Component Interaction**: State can be used to communicate between different components in your application.
+
+3. **Data Fetching**: State can manage the loading and display of data fetched from APIs or external sources.
+
+4. **UI State**: State can control the visibility, appearance, and behavior of UI elements in your components.
+
+5. **Event Handling**: State can respond to user events like clicks, hovers, and keyboard inputs.
+
+## Lifecycle Methods
+<br/>
+
+React components have a lifecycle that consists of several phases, from initialization to destruction. Each phase has associated lifecycle methods that you can override to perform actions at specific points in the component's lifecycle.
+
+Here are some common lifecycle methods in React:
+
+1. **`componentDidMount()`**: This method is called after the component has been rendered to the DOM. It is useful for performing side effects like data fetching, subscriptions, or DOM manipulations.
+
+2. **`componentDidUpdate(prevProps, prevState)`**: This method is called after the component's state or props have changed. It is useful for responding to state changes and updating the component's UI.
+
+3. **`componentWillUnmount()`**: This method is called before the component is removed from the DOM. It is useful for cleaning up resources like event listeners or subscriptions.
+
+4. **`shouldComponentUpdate(nextProps, nextState)`**: This method is called before the component re-renders. It is useful for optimizing performance by preventing unnecessary re-renders.
+
+5. **`getDerivedStateFromProps(nextProps, prevState)`**: This method is called when the component receives new props. It is useful for updating the component's state based on the new props.
+
+## Conclusion
+<br/>
+
+In this guide, we covered the basics of state and lifecycle in React components. State allows components to manage their own data and respond to user interactions, while lifecycle methods provide hooks for performing actions at different points in the component's lifecycle. By understanding state and lifecycle, you can create dynamic and interactive components in your React applications.
+
+Let's move on to the next topic: [Handling Events](/HandlingEvents).
+<br/><br/>
