@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import CodeBlock from './CodeBlock';
 
 interface CopyableCodeProps {
     children: ReactNode;
@@ -43,7 +44,8 @@ const CopyableCode: React.FC<CopyableCodeProps> = ({ children, language }) => {
                 paddingLeft: '10px',
                 marginRight: '40px', // Ensure the button does not overlap the text
             }}>
-                <code className={`language-${language}`}>{children}</code>
+                {/* <code className={`language-${language}`}>{children}</code> */}
+            <CodeBlock language={language || 'javascript'} code={typeof children === 'string' ? children : ''} />
             </pre>
             <style>{`
                 .copyable_code:hover button {

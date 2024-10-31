@@ -9,39 +9,44 @@ import CopyableCode from '/src/components/CopyableCode.tsx';
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Here are some basic syntax elements:
 
 - **Headings**: Use {`#`} for headings. More {`#`} means smaller headings.
-    ```markdown
+<CopyableCode language='Markdown'>
+    {`
     # Heading 1
     ## Heading 2
-    ### Heading 3
-    ```
+    ### Heading 3`}
+</CopyableCode>
 
 - **Bold and Italic**: Use <span className='highlight'>{`**`}</span> or <span className='highlight'>{`__`}</span> for bold, and <span className='highlight'>{`*`}</span> or <span className='highlight'>{`_`}</span> for italic.
-    ```markdown
+<CopyableCode language='Markdown'>
+   { `
     **bold text**
-    *italic text*
-    ```
-
+    *italic text*`}
+</CopyableCode>
 - **Lists**: Use <span className='highlight'>{`-`}</span> or <span className='highlight'>{`*`}</span> for unordered lists, and numbers for ordered lists.
-    ```markdown
+<CopyableCode language='Markdown'>
+    {`
     - Item 1
     - Item 2
     1. First item
-    2. Second item
-    ```
-
+    2. Second item `}
+</CopyableCode>
 - **Code Blocks**: Use triple backticks for code blocks.
-    ```markdown
-    ```javascript
+
+<CopyableCode language='Markdown'>
+    {`
+    \`\`\`javascript
     console.log('Hello, world!');
-    ```
-    ```
+    \`\`\``}
+</CopyableCode>
+
 
 ## Embedding React Components in MDX
 <br />
 
 MDX allows you to embed React components directly within your Markdown content. This is done using JSX syntax. Here's an example of how to insert a React component:
     
-    ```jsx
+<CopyableCode language='jsx'>
+    {`
     import React from 'react';
 
     const MyComponent = () => {
@@ -49,7 +54,8 @@ MDX allows you to embed React components directly within your Markdown content. 
     };
 
     <MyComponent />
-    ```
+    `}
+</CopyableCode>
 
 By combining Markdown and JSX, you can create rich, interactive content that includes live code examples, custom components, and more.
 
@@ -59,23 +65,27 @@ By combining Markdown and JSX, you can create rich, interactive content that inc
 You can define custom React components and use them within your MDX files. Here's how to create and use a custom component:
 
 1. **Create a custom component**:
-    ```jsx
+
+<CopyableCode language="jsx"> 
+    {`
     const CustomButton = ({ children }) => (
         <button style={{ backgroundColor: 'blue', color: 'white' }}>
             {children}
         </button>
-    );
-    ```
-
+    );`}
+</CopyableCode>
 2. **Import and use the custom component in your MDX file**:
-    ```mdx
+
+<CopyableCode language='Markdown'>
+    {`
 
     import CustomButton from './path/to/CustomButton';
 
     # Using Custom Components
 
     <CustomButton>Click Me!</CustomButton>
-    ```
+    `}
+</CopyableCode>
 
 This allows you to enhance your MDX content with interactive and reusable React components.
 

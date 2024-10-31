@@ -23,7 +23,7 @@ To create a new React project, you can use the <span className='highlight'>creat
 <br/>
 
 <CopyableCode language="bash">
-    npx create-react-app my-app
+    {`npx create-react-app my-app`}
 </CopyableCode>
 
 This command creates a new React project called <span className='highlight'>my-app</span> in the current directory. You can replace <span className='highlight'>my-app</span> with the name of your choice.
@@ -37,14 +37,14 @@ To add MDX support to your React project, you need to install the <span classNam
 <br/>
 
 <CopyableCode language="bash">
-    npm install @mdx-js/react
+    {`npm install @mdx-js/react`}
 </CopyableCode>
 
 Next, you need to configure your project to use MDX. Create a file called <span className='highlight'>{`mdx-provider.js`}</span> in your <span className='highlight'>src</span> directory with the following content:
 
 <br/>
 
-<CopyableCode language="javascript">
+<CopyableCode language="jsx">
 {`
     import { MDXProvider } from '@mdx-js/react';
     import React from 'react';
@@ -66,7 +66,7 @@ Then, wrap your application with the <span className='highlight'>{`MdxProvider`}
 
 <br/>
 
-<CopyableCode language="javascript">
+<CopyableCode language="jsx">
 {`  import React from 'react';
     import ReactDOM from 'react-dom';
     import App from './App';
@@ -90,7 +90,7 @@ To start the development server, navigate to the project directory and run the f
 <br/>
 
 <CopyableCode language="bash">
-    npm start
+    {`npm start`}
 </CopyableCode>
 
 This command starts the development server and opens your React application in the browser. You can now view and interact with your React project.

@@ -11,17 +11,20 @@ Here's an example of how to use CSS Modules in an MDX file:
 
 1. Create a CSS file with the styles you want to apply. For example, <span className='highlight'>{`styles.module.css`}</span>:
 
-```css
+<CopyableCode language='css'>
+{`
 /* styles.module.css */
 .example {
     color: blue;
     font-size: 20px;
 }
-```
+`}
+</CopyableCode>
 
 2. Import the CSS file into your MDX file:
 
-```jsx
+<CopyableCode language='jsx'>
+{`
 import styles from './styles.module.css';
 
 # Using CSS Modules
@@ -29,7 +32,8 @@ import styles from './styles.module.css';
 <div className={styles.example}>
     This text will be styled with the CSS module.
 </div>
-```
+`}
+</CopyableCode>
 
 In the example above, the <span className='highlight'>{`styles.example`}</span> class is scoped to the component, ensuring that the styles only apply to the specific element.
 
@@ -39,13 +43,15 @@ Inline styles allow you to apply styles directly to elements using JavaScript ob
 
 Here's an example of using inline styles in an MDX file:
 
-```jsx
+<CopyableCode language='jsx'>
+{`
 # Inline Styles
 
 <div style={{ color: 'red', fontSize: '24px' }}>
     This text will be styled with inline styles.
 </div>
-```
+`}
+</CopyableCode>
 
 In the example above, the <span className='highlight'>style</span> attribute is set to a JavaScript object that defines the styles for the element.
 
@@ -55,16 +61,18 @@ Global styles can be applied to all components within an MDX file. This can be u
 
 Here's an example of applying global styles in an MDX file:
 
-```jsx
-# Global Styles
+<CopyableCode language='jsx'>
+    {`
+    # Global Styles
 
-<style jsx global>{`
-    body {
-        background-color: lightgray;
-    }
-`}
-</style>
-```
+    <style jsx global>{\`
+        body {
+            background-color: lightgray;
+        }
+    \`}
+    </style>`}
+
+</CopyableCode>
 
 In the example above, the global styles are defined using the <span className='highlight'>jsx</span> prop, ensuring that the styles apply to all components within the MDX file.
 
