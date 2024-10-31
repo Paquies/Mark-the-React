@@ -1,0 +1,82 @@
+import CopyableCode from '/src/components/CopyableCode.tsx';
+
+# Styling MDX Components
+<br/><br/>
+
+## Using CSS Modules
+
+CSS Modules allow you to write CSS that's scoped locally to the component, preventing styles from leaking into other parts of your application. This is particularly useful when styling MDX components.
+
+Here's an example of how to use CSS Modules in an MDX file:
+
+1. Create a CSS file with the styles you want to apply. For example, <span className='highlight'>{`styles.module.css`}</span>:
+
+<CopyableCode language='css'>
+{`
+/* styles.module.css */
+.example {
+    color: blue;
+    font-size: 20px;
+}
+`}
+</CopyableCode>
+
+2. Import the CSS file into your MDX file:
+
+<CopyableCode language='jsx'>
+{`
+import styles from './styles.module.css';
+
+# Using CSS Modules
+
+<div className={styles.example}>
+    This text will be styled with the CSS module.
+</div>
+`}
+</CopyableCode>
+
+In the example above, the <span className='highlight'>{`styles.example`}</span> class is scoped to the component, ensuring that the styles only apply to the specific element.
+
+## Inline Styles
+
+Inline styles allow you to apply styles directly to elements using JavaScript objects. This can be useful for applying dynamic styles or for styling individual elements.
+
+Here's an example of using inline styles in an MDX file:
+
+<CopyableCode language='jsx'>
+{`
+# Inline Styles
+
+<div style={{ color: 'red', fontSize: '24px' }}>
+    This text will be styled with inline styles.
+</div>
+`}
+</CopyableCode>
+
+In the example above, the <span className='highlight'>style</span> attribute is set to a JavaScript object that defines the styles for the element.
+
+## Global Styles
+
+Global styles can be applied to all components within an MDX file. This can be useful for defining common styles that apply to multiple components.
+
+Here's an example of applying global styles in an MDX file:
+
+<CopyableCode language='jsx'>
+    {`
+    # Global Styles
+
+    <style jsx global>{\`
+        body {
+            background-color: lightgray;
+        }
+    \`}
+    </style>`}
+
+</CopyableCode>
+
+In the example above, the global styles are defined using the <span className='highlight'>jsx</span> prop, ensuring that the styles apply to all components within the MDX file.
+
+## Conclusion
+
+In this guide, we explored different ways to style MDX components, including using CSS Modules, inline styles, and global styles. By applying styles to your MDX components, you can create visually appealing and interactive content for your documentation, tutorials, and blogs.
+

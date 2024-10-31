@@ -1,0 +1,36 @@
+// src/assets/styles/style.scss 
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+// Override Bootstrap variables
+$navbar-inverse-bg: rgb(26, 26, 26); // Change this to your desired background color
+$navbar-inverse-color: #ffffff; // Change this to your desired text color
+$bg_dark: rgb(26, 26, 26); // Change this to your desired background color
+
+// Import Bootstrap's styles
+@import "~bootstrap/scss/bootstrap";
+
+.navbar-inverse {
+  background-color: $navbar-inverse-bg !important;
+  color: $navbar-inverse-color !important;
+}
+
+.bg-inverse {
+    background-color: $navbar-inverse-bg !important;
+    color: $navbar-inverse-color !important;
+}
+
+.navbar {
+    margin-bottom: 0;
+    // border-bottom: 20px #ffffff;
+}
+
+.bg-dark {
+    background-color: $bg_dark !important;
+}
+
+.nav-link:hover {
+    color: #b4b4b4 !important;
+    
+}
+
