@@ -2,7 +2,7 @@
 
 ## Introduction
 
-CSS Toolbox is a project aimed at providing a comprehensive guide for setting up and working with React and MDX. This guide covers various aspects of using React and MDX together, including setting up the project, configuring MDX, writing MDX content, styling MDX components, and providing practical examples.
+Mark the React is a project aimed at providing a comprehensive guide for setting up and working with React and MDX. This guide covers various aspects of using React and MDX together, including setting up the project, configuring MDX, writing MDX content, styling MDX components, and providing practical examples.
 
 ## Technologies Used
 
@@ -36,8 +36,8 @@ To get started with the CSS Toolbox project, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/css_toolbox.git
-    cd css_toolbox
+    git clone https://github.com/your-username/Mark-the-React.git
+    cd Mark-the-React
     ```
 
 2. **Install dependencies**:
@@ -57,6 +57,6 @@ To get started with the CSS Toolbox project, follow these steps:
 
 ## Conclusion
 
-CSS Toolbox aims to provide a comprehensive guide for developers looking to integrate React and MDX in their projects. By following this guide, you will be able to create interactive and dynamic documentation for your React components.
+Mark the React aims to provide a comprehensive guide for developers looking to integrate React and MDX in their projects. By following this guide, you will be able to create interactive and dynamic documentation for your React components.
 
 For more information, please refer to the individual MDX files and components included in this project.
