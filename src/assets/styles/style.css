@@ -5,3 +5,8 @@
     padding: 0.2em; /* Un peu de padding pour rendre le surlignage plus visible */
     border-radius: 5px; /* Coins arrondis */
 }
+
+.titleMdx{
+    font-size: 65px;
+    font-weight: 750;
+}

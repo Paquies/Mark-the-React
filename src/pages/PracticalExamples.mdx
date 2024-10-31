@@ -1,0 +1,92 @@
+import CopyableCode from '/src/components/CopyableCode.tsx';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+// import Alert from '/src/components/Alert.tsx';
+
+# Practical Examples
+<br/><br/>
+## Interactive Documentation with React in MDX
+<br/>
+
+Interactive documentation allows you to create components that users can interact with directly within the documentation. This can be useful for demonstrating how components work and for providing live examples.
+
+Here's an example of an interactive button component using React within an MDX file:
+
+<LiveProvider code={`import React, { useState } from 'react';
+
+function InteractiveButton() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <p>Button clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>
+                Click me
+            </button>
+        </div>
+    );
+}
+
+export default InteractiveButton;`}>
+  <LiveEditor />
+  <LiveError />
+  <LivePreview />
+</LiveProvider>
+
+In the example above, the <span className='highlight'>InteractiveButton</span> component updates its state each time the button is clicked, demonstrating how state can be used in interactive components within an MDX file.
+
+## Live Code Examples in MDX
+<br/>
+
+Live code examples allow users to see and interact with code directly within the documentation. This can be achieved using libraries like <span className='highlight'>{`react-live`}</span> or <span className='highlight'>{`prism-react-renderer`}</span>.
+
+Here's an example of a live code editor using <span className='highlight'>{`react-live`}</span> within an MDX file:
+
+<LiveProvider code={`import React from 'react';
+
+function HelloWorld() {
+    return <h1>Hello, world!</h1>;
+}
+
+export default HelloWorld;`}>
+  <LiveEditor />
+  <LiveError />
+  <LivePreview />
+</LiveProvider>
+
+In the example above, the code editor allows users to see the code for the <span className='highlight'>HelloWorld</span> component and see the rendered output in real-time within the MDX file.
+
+## Dynamic Blog Post in MDX
+<br/>
+
+A dynamic blog post can include reusable components like alerts or code snippets to enhance the content and provide additional context or functionality.
+
+Here's an example of a blog post structure with an alert and a code snippet:
+
+{/* <Alert type="info">
+  This is an informational alert to highlight important content.
+</Alert> */}
+
+### Example Code Snippet
+<br/>
+
+Below is an example of a reusable code snippet component:
+
+<CopyableCode code={`import React from 'react';
+
+function ExampleComponent() {
+    return <div>Example Component</div>;
+}
+
+export default ExampleComponent;`} />
+
+In the example above, the <span className='highlight'>CopyableCode</span> component allows users to easily copy the code snippet to their clipboard.
+
+## Conclusion
+<br/>
+
+In this guide, we covered practical examples of creating interactive documentation with React in MDX, setting up live code examples, and structuring dynamic blog posts with reusable components. By leveraging these techniques, you can create engaging and interactive content in your MDX files.
+
+{/* <Alert type="info">
+  Let's move on to the next topic: [Handling Events](/HandlingEvents).
+</Alert> */}
+<br/><br/>

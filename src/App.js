@@ -7,11 +7,11 @@ import Footer from './components/Footer';
 import Layout_navigation from './components/Layout_navigation';
 import GettingStarted from './pages/GettingStarted.mdx';
 import SettingUp from './pages/SettingUp.mdx';
-import UnderstandingJSX from './pages/UnderstandingJSX.mdx';
-import ComponentsAndProps from './pages/ComponentsAndProps.mdx';
+import ConfiguringMDX from './pages/ConfiguringMDX.mdx';
+import WritingMDXContent from './pages/WritingMDXContent.mdx';
 import Home from './components/Home';
-import StateAndLifecycle from './pages/StateAndLifecycle.mdx';
-import HandlingEveents from './pages/HandlingEvents.mdx';
+import PracticalExamples from './pages/PracticalExamples.mdx';
+import StylingMDXComponents from './pages/StylingMDXComponents.mdx';
 
 export default function App() {
   return (
@@ -19,24 +19,30 @@ export default function App() {
       <Router>
         <Header />
           <Home>
-            <div className="col-md-3">
+            <div className="col-md-2">
               <Layout_navigation />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-8">
               <MDXProvider>
               <div className="App">
                 <div className="mt-5"></div>
                   <Routes>
                     <Route path="/" element={<GettingStarted />} />
                     <Route path="/setting-up" element={<SettingUp />} />
-                    <Route path="/understanding-jsx" element={<UnderstandingJSX />} />
-                    <Route path="/components-and-props" element={<ComponentsAndProps />} />
-                    <Route path="/state-and-lifecycle" element={<StateAndLifecycle />} />
-                    <Route path="/handling-events" element={<HandlingEveents />} />
+                    <Route path="/configurinMDX" element={<ConfiguringMDX />} />
+                    <Route path="/writing-mdx-content" element={<WritingMDXContent />} />
+                    <Route path="/pratical-examples" element={<PracticalExamples />} />
+                    <Route path="/styling-mdx-components" element={<StylingMDXComponents />} />
                   </Routes>
                   <div></div>
               </div>
               </MDXProvider>
+            </div>
+            <div className="col-md-2">
+              <div className="mt-5">
+                <h4>Ads</h4>
+                <div className="ads">Ads</div>
+              </div>
             </div>
           </Home>
         <Footer />

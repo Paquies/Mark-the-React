@@ -1,34 +1,85 @@
 import CopyableCode from '/src/components/CopyableCode.tsx';
 
-# Setting Up a React Project
+# Setting Up a React Project with MDX
 
 <br/>
 
-## Installation
+## Prerequisites
 
-To install React, you can use the following command:
-
-<br/>
-
-<CopyableCode>
-    npm install -g create-react-app
-</CopyableCode>
-
-This command installs the <span className='highlight'>create-react-app</span> package globally on your machine. You can then use it to create new React projects.
+Before you start, make sure you have a basic understanding of React, Node.js, and Markdown. These are essential for setting up and working with a React project that includes MDX.
 
 <br/>
 
-## Creating a New React Project
+## Installing Node.js and npm
 
-To create a new React project, run the following command:
+To work with React, you need to have Node.js and npm installed on your machine. You can download and install them from the [official Node.js website](https://nodejs.org/).
 
 <br/>
 
-<CopyableCode>
+## Creating a React Project
+
+To create a new React project, you can use the <span className='highlight'>create-react-app</span> tool. Run the following command in your terminal:
+
+<br/>
+
+<CopyableCode language="bash">
     npx create-react-app my-app
 </CopyableCode>
 
 This command creates a new React project called <span className='highlight'>my-app</span> in the current directory. You can replace <span className='highlight'>my-app</span> with the name of your choice.
+
+<br/>
+
+## Adding MDX Support
+
+To add MDX support to your React project, you need to install the <span className='highlight'>{`@mdx-js/react`}</span> package. Run the following command in your project directory:
+
+<br/>
+
+<CopyableCode language="bash">
+    npm install @mdx-js/react
+</CopyableCode>
+
+Next, you need to configure your project to use MDX. Create a file called <span className='highlight'>{`mdx-provider.js`}</span> in your <span className='highlight'>src</span> directory with the following content:
+
+<br/>
+
+<CopyableCode language="javascript">
+{`
+    import { MDXProvider } from '@mdx-js/react';
+    import React from 'react';
+
+    const components = {
+        // Add custom components here
+    };
+
+    const MdxProvider = ({ children }) => (
+        <MDXProvider components={components}>
+            {children}
+        </MDXProvider>
+    );
+
+    export default MdxProvider;`}
+</CopyableCode>
+
+Then, wrap your application with the <span className='highlight'>{`MdxProvider`}</span> component. Modify your <span className='highlight'>{`src/index.js`}</span> file as follows:
+
+<br/>
+
+<CopyableCode language="javascript">
+{`  import React from 'react';
+    import ReactDOM from 'react-dom';
+    import App from './App';
+    import MdxProvider from './mdx-provider';
+
+    ReactDOM.render(
+        <MdxProvider>
+            <App />
+        </MdxProvider>,
+        document.getElementById('root')
+    );
+`}
+</CopyableCode>
 
 <br/>
 
@@ -38,16 +89,17 @@ To start the development server, navigate to the project directory and run the f
 
 <br/>
 
-<CopyableCode>
+<CopyableCode language="bash">
     npm start
 </CopyableCode>
 
 This command starts the development server and opens your React application in the browser. You can now view and interact with your React project.
 
 <br/>
+
 ## Conclusion
 
-In this guide, we covered the steps to set up a new React project using <span className='highlight'>create-react-app</span>. You can now start building your React applications and explore the world of React development.
+In this guide, we covered the steps to set up a new React project using <span className='highlight'>create-react-app</span> and add MDX support. You can now start building your React applications with MDX and explore the world of React development.
 
 Happy coding!
 <br/>

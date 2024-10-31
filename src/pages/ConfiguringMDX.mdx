@@ -1,0 +1,99 @@
+import CopyableCode from '/src/components/CopyableCode.tsx';
+
+# Configuring MDX
+<br/><br/>
+
+## Adding MDX to Webpack/Bundler
+<br/>
+To use MDX in your project, you need to configure your bundler (like Webpack) to handle <span className='highlight'>{`.mdx`}</span> files. Here are the steps to configure Webpack for MDX:
+
+1. **Install necessary packages**:
+    ```bash
+    npm install @mdx-js/loader @mdx-js/react
+    ```
+
+2. **Update Webpack configuration**:
+    ```javascript
+    module.exports = {
+      module: {
+         rules: [
+            {
+              test: /\.mdx$/,
+              use: [
+                 'babel-loader',
+                 '@mdx-js/loader'
+              ]
+            }
+         ]
+      }
+    };
+    ```
+
+This configuration tells Webpack to use <span className='highlight'>{`babel-loader`}</span> and <span className='highlight'>{`@mdx-js/loader`}</span> for <span className='highlight'>{`.mdx`}</span> files.
+
+<br/>
+## Setting up MDX Provider
+<br/>
+The <span className='highlight'>MDXProvider</span> component allows you to customize how MDX content is rendered. Here's how to set it up:
+
+1. **Import MDXProvider**:
+    ```javascript
+    import { MDXProvider } from '@mdx-js/react';
+    ```
+
+2. **Define custom components**:
+    ```javascript
+    const components = {
+      h1: (props) => <h1 style={{ color: 'tomato' }} {...props} />,
+      // Add more custom components as needed
+    };
+    ```
+
+3. **Wrap your application with MDXProvider**:
+    ```javascript
+    function App() {
+      return (
+         <MDXProvider components={components}>
+            <YourMDXContent />
+         </MDXProvider>
+      );
+    }
+    ```
+
+This setup allows you to customize the rendering of MDX content using your own React components.
+
+<br/>
+## Using Custom Components
+<br/>
+You can define and use custom React components within your MDX files. Here's how:
+
+1. **Create a custom component**:
+    ```javascript
+    const CustomButton = ({ children }) => (
+      <button style={{ backgroundColor: 'blue', color: 'white' }}>
+         {children}
+      </button>
+    );
+    ```
+
+2. **Import and use the custom component in your MDX file**:
+    ```mdx
+    import CustomButton from './path/to/CustomButton';
+
+    # Using Custom Components
+
+    <CustomButton>Click Me!</CustomButton>
+    ```
+
+This allows you to enhance your MDX content with interactive and reusable React components.
+
+<br/>
+## Conclusion
+<br/>
+In this guide, we covered how to configure Webpack for MDX, set up the MDXProvider to customize rendering, and use custom React components within MDX files. These steps will help you integrate MDX into your project and leverage its full potential for creating rich and interactive content.
+
+Happy coding!
+
+<br/>
+<hr/>
+<br/>
