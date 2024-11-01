@@ -1,0 +1,77 @@
+import CopyableCode from '/src/components/CopyableCode.tsx';
+
+
+<h1 className='titleMdx'>Deploying the React-MDX Project</h1>
+<br/>
+
+Deploying your React-MDX project involves a few key steps to ensure that your application is optimized and accessible to your users. This guide will walk you through the process.
+
+## Building for Production
+
+To build your React-MDX project for production, you need to optimize your app. This involves minifying your code, optimizing images, and ensuring that your app runs efficiently.
+
+1. **Run the build command**: In your project directory, run the following command to create an optimized production build:
+    
+<CopyableCode language='bash'>
+    {`npm run build`}
+</CopyableCode>
+
+    This will create a <span className='highlight'>build</span> folder with all the optimized files.
+
+    ![Build Command](https://via.placeholder.com/800x200?text=Build+Command)
+
+2. **Verify the build**: You can verify the build by running a local server to serve the files from the `build` folder:
+
+<CopyableCode language='bash'>
+    {`npx serve -s build`}
+</CopyableCode>
+
+    This will start a local server at <span className='highlight'>{`http://localhost:5000`}</span> where you can check your production build.
+
+    ![Local Server](https://via.placeholder.com/800x200?text=Local+Server)
+
+> **Warning**: Make sure to test your production build thoroughly before deploying.
+
+## Hosting Options
+
+Once you have a production build, you need to choose a hosting service to deploy your app. Here are some popular options:
+
+### Vercel
+
+Vercel is a popular choice for hosting React applications. It provides a seamless integration with GitHub and offers automatic deployments.
+
+1. **Sign up for Vercel**: Create an account at [vercel.com](https://vercel.com).
+2. **Import your project**: Connect your GitHub repository and import your project.
+3. **Deploy**: Vercel will automatically build and deploy your project. You can customize the build settings if needed.
+
+    ![Vercel Deployment](https://via.placeholder.com/800x200?text=Vercel+Deployment)
+
+### Netlify
+
+Netlify is another excellent option for hosting static sites and React applications. It also offers continuous deployment from GitHub.
+
+1. **Sign up for Netlify**: Create an account at [netlify.com](https://netlify.com).
+2. **New site from Git**: Choose the option to create a new site from Git and connect your GitHub repository.
+3. **Deploy**: Netlify will build and deploy your project automatically.
+
+    ![Netlify Deployment](https://via.placeholder.com/800x200?text=Netlify+Deployment)
+
+### GitHub Pages
+
+GitHub Pages is a free hosting service provided by GitHub for hosting static websites directly from a GitHub repository.
+
+1. **Create a repository**: Ensure your project is in a GitHub repository.
+2. **Build and deploy**: Use the following commands to build and deploy your project to GitHub Pages:
+<CopyableCode language='bash'>
+    {`
+    npm run build
+    git add build
+    git commit -m "Deploy to GitHub Pages"
+    git subtree push --prefix build origin gh-pages
+    `}
+</CopyableCode>
+3. **Access your site**: Your site will be available at <span className='highlight'>{`https://<username>.github.io/<repository-name>`}</span>.
+
+    ![GitHub Pages Deployment](https://via.placeholder.com/800x200?text=GitHub+Pages+Deployment)
+
+> **Info**: Each hosting option has its own set of features and benefits. Choose the one that best fits your needs.

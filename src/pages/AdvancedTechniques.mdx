@@ -1,0 +1,140 @@
+import CopyableCode from '/src/components/CopyableCode.tsx';
+
+<h1 className='titleMdx'>Advanced Techniques</h1>
+<br/>
+
+## Building Custom Shortcodes
+
+Shortcodes are reusable UI elements that can be used throughout your MDX files. They help in maintaining consistency and reducing redundancy. Here's a simple tutorial on creating custom shortcodes:
+
+1. **Create a Shortcode Component**: Define a React component that will serve as your shortcode.
+<CopyableCode language="jsx">
+    {`
+    // src/components/Alert.js
+    import React from 'react';
+
+    const Alert = ({ type, children }) => {
+      const alertType = type === 'warning' ? 'alert-warning' : 'alert-info';
+      return <div className={\`alert \${alertType}\`}>{children}</div>;
+    };
+
+    export default Alert;`}
+</CopyableCode>
+
+2. **Use the Shortcode in MDX**: Import and use the shortcode in your MDX file.
+
+<CopyableCode language='markdown'>
+    {`
+    import Alert from '../components/Alert';
+
+    <Alert type="warning">
+      This is a warning alert!
+    </Alert>
+
+    <Alert type="info">
+      This is an info alert!
+    </Alert>
+    `}
+</CopyableCode>
+
+## Using MDX with React Router
+
+Integrating MDX files into a React app’s routing can enhance your documentation experience. Here's how you can do it:
+
+1. **Install Dependencies**: Ensure you have <span className='highlight'>{`@mdx-js/react`}</span> and <span className='highlight'>react-router-dom</span> installed.
+
+<CopyableCode language='bash'>
+    {`npm install @mdx-js/react react-router-dom`}
+</CopyableCode>
+
+2. **Set Up MDX Provider**: Wrap your application with the MDXProvider.
+
+<CopyableCode language='jsx'>
+    {`
+    // src/App.js
+    import React from 'react';
+    import { MDXProvider } from '@mdx-js/react';
+    import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+    import AdvancedTechniques from './pages/AdvancedTechniques.mdx';
+
+    const App = () => (
+      <MDXProvider>
+        <Router>
+          <Switch>
+            <Route path="/advanced-techniques" component={AdvancedTechniques} />
+          </Switch>
+        </Router>
+      </MDXProvider>
+    );
+
+    export default App;
+    `}
+</CopyableCode>
+
+3. **Navigate to MDX Page**: Use <span className='highlight'>Link</span> from <span className='highlight'>react-router-dom</span> to navigate to your MDX page.
+
+<CopyableCode language='jsx'>
+    {`
+    // src/components/NavBar.js
+    import React from 'react';
+    import { Link } from 'react-router-dom';
+
+    const NavBar = () => (
+      <nav>
+        <Link to="/advanced-techniques">Advanced Techniques</Link>
+      </nav>
+    );
+
+    export default NavBar;
+    `}
+</CopyableCode>
+
+## Creating a Component Library
+
+Building a consistent, reusable component library for MDX-based documentation ensures that your documentation is maintainable and scalable. Here's a step-by-step guide:
+
+1. **Define Components**: Create a set of reusable components.
+
+<CopyableCode language='jsx'>
+    {`
+    // src/components/Button.js
+    import React from 'react';
+
+    const Button = ({ children, onClick }) => (
+      <button onClick={onClick} className="btn">
+        {children}
+      </button>
+    );
+
+    export default Button;
+    `}
+</CopyableCode>
+
+2. **Export Components**: Export all your components from an index file.
+
+<CopyableCode language='jsx'>
+    {`
+    // src/components/index.js
+    export { default as Alert } from './Alert';
+    export { default as Button } from './Button';
+    `}
+</CopyableCode>
+
+3. **Use Components in MDX**: Import and use these components in your MDX files.
+
+<CopyableCode language='markdown'>
+    {`
+    import { Alert, Button } from '../components';
+
+    <Alert type="info">
+      This is an info alert with a button!
+      <Button onClick={() => alert('Button clicked!')}>Click Me</Button>
+    </Alert>
+    `}
+</CopyableCode>
+
+By following these advanced techniques, you can create a powerful and maintainable MDX-based documentation system.
+
+<br/>
+<hr/>
+<br/>

@@ -14,7 +14,7 @@ const CopyableCode: React.FC<CopyableCodeProps> = ({ children, language }) => {
     };
 
     return (
-        <div className='copyable_code' style={{ position: 'relative', display: 'inline-block', margin: '0', width: '70%', height:'40%' }}>
+        <div className='copyable_code' style={{ position: 'relative', display: 'inline-block', margin: '0', width: '80%', height:'40%' }}>
             <button
                 onClick={handleCopy}
                 style={{

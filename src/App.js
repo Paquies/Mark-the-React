@@ -12,6 +12,8 @@ import WritingMDXContent from './pages/WritingMDXContent.mdx';
 import Home from './components/Home';
 import PracticalExamples from './pages/PracticalExamples.mdx';
 import StylingMDXComponents from './pages/StylingMDXComponents.mdx';
+import AdvancedTechniques from './pages/AdvancedTechniques.mdx';
+import Deploying from './pages/Deploying.mdx';
 
 export default function App() {
   return (
@@ -33,6 +35,8 @@ export default function App() {
                     <Route path="/writing-mdx-content" element={<WritingMDXContent />} />
                     <Route path="/pratical-examples" element={<PracticalExamples />} />
                     <Route path="/styling-mdx-components" element={<StylingMDXComponents />} />
+                    <Route path="/advanced-techniques" element={<AdvancedTechniques />} />
+                    <Route path="/deploying" element={<Deploying />} />
                   </Routes>
                   <div></div>
               </div>
