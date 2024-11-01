@@ -10,3 +10,28 @@
     font-size: 65px;
     font-weight: 750;
 }
+
+.on-this-page {
+        max-height: 100%;
+    }
+  
+.on-this-page h5 {
+    color: #fff;
+  }
+  
+.on-this-page .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  
+.on-this-page .nav-link {
+    color: #6c757d; /* text-secondary */
+  }
+  
+.on-this-page .nav-link:hover {
+    color: #fff;
+  }
+
+.on-this-page .nav-item.active .nav-link {
+    color: #da0000; /* Couleur pour l'élément actif */
+    font-weight: bold; /* Optionnel : rendre le texte en gras */
+  }
